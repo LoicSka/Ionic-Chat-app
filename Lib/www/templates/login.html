@@ -1,0 +1,43 @@
+<!-- <div class="bar bar-header bar-positive">
+   <h1 class="title brush">Kwibohora</h1>
+</div> -->
+<ion-view name="login-view">
+  <ion-content >
+      <div class="list mar-top-20">
+            <label class="item item-input white">
+              <input type="text" placeholder="Full Name" ng-model="data.username">
+            </label>
+            <label class="item item-input white">
+              <input type="text" placeholder="City/State" ng-model="data.usercity">
+            </label>
+            <label class="item item-input white">
+              <input type="text" placeholder="Phone Number" ng-model="data.userphone">
+            </label>
+            <label class="item item-input white no-bottom">
+              <input type="text" placeholder="Email" ng-model="data.useremail">
+            </label>
+            <label class="item  item-input white">
+              <input type="text" placeholder="Profession" ng-model="data.userprofession">
+            </label>
+            <label class="item item-input white">
+              <input type="text" placeholder="University" ng-model="data.useruniversity">
+            </label>
+            <label class="item item-input white item-select">
+              <div class="input-label">
+                <p class="grey">Gender</p> 
+              </div>
+              <select class="grey">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </label>
+      </div>
+      
+          
+      <div class="row row-bottom padding-top">
+          <button class="button button-block button-positive" ng-click="login(data)">
+             Log in
+          </button>
+      </div>
+  </ion-content>
+</ion-view>

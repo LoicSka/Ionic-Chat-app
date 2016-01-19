@@ -1,0 +1,29 @@
+<ion-view hide-nav-bar="true" view-title="Chats" >
+  <ion-content class="splash" >
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-list class="no-border">
+      <ion-item class="item-remove-animate item-avatar" ng-repeat="item in messages" type="item-text-wrap">
+        <img src="http://placehold.it/100x100">
+        <div class="chat-bubble right item-text-wrap">
+          <h2>{{item.user_name}}</h2>
+          <h3>{{item.city_name}}.</h3>
+          <p>{{item.body}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <form novalidate>
+      <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+          <label class="item-input-wrapper">
+              <input type="text" ng-model="data.message" placeholder="Share your opinion" required minlength="1" maxlength="1500" msd-elastic>
+          </label>
+          <div class="footer-btn-wrap">
+            <button class="button button-icon icon ion-android-send footer-btn"
+                 ng-click="sendMessage(data)">
+            </button>
+          </div>
+      </ion-footer-bar>
+  </form>
+</ion-view>
+ 
+ 

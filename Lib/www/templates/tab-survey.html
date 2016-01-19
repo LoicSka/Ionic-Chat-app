@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-content>
+  <div class="has-subheader mar-top-20">
+    <div class="item item-divider">
+    	{{survey.content}} ?
+    </div>
+  	<ion-radio class="no-bottom" ng-model="choice.answer" value="{{survey.answer_1}}">{{survey.answer_1}}</ion-radio>
+	<ion-radio ng-model="choice.answer" value="{{survey.answer_2}}">{{survey.answer_2}}</ion-radio>
+	<ion-radio ng-model="choice.answer" value="{{survey.answer_3}}">{{survey.answer_3}}</ion-radio>
+	<input type="text" style="display:none;" ng-model="choice.questionid"
+	value="{{survey.id}}"
+  </div>
+  <div class="row row-bottom padding-top">
+  	<button class="button button-block button-positive" ng-click="SendSurvey(choice)">
+	  submit
+    </button>
+  </div>
+  </ion-content>
+</ion-view>
